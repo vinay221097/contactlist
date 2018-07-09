@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style>
+  h1 {
+    color: #000040;
+    font-family: Times new roman;
+    font-size: 300%;
+    font-weight: bold;
+}
+.topnav {
+  overflow:auto;
+  height:30px;
+  width:100%;
+  background-color: #333;
+}
+#log{float:right;
+margin-right: 35px;
+color: white;
+font-size: 16px;}
+</style>
+</head>
+<body>
+	<div class="topnav">
+  <a href="/login/" id="log">logout</a>
+</div>
+
+<center><h1> FRIENDS LIST</h1></center>
+<br/>
+<br/>
+<div class="container">
+             
+  <table class="table" >
+    <thead class="table-bordered thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone NUmber</th>
+      </tr>
+    </thead>
+    <tbody class="table-bordered table-light table-hover">
+      {%for ct in contact%}
+      <tr>
+        <td>{{ct.name}}</td>
+        <td>{{ct.email}}</td>
+        <td>{{ct.phone_number}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
