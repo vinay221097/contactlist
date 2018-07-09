@@ -121,7 +121,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,"staticfiles"),
 ]
-
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 CHROME_DRIVER_ROOT=os.path.join(BASE_DIR,'chromedriver_win32')
 LOGIN_REDIRECT_URL = '/index/'
 LOGOUT_REDIRECT_URL = '/'
